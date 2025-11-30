@@ -1,0 +1,77 @@
+// 绿色主题样式 - 简约风格
+#app {
+  .sidebar-container {
+    &.theme-green {
+      background: #f0f9eb; // 浅绿色背景，更简约
+
+      .el-scrollbar {
+        .el-menu {
+          background: #f0f9eb;
+          text-color: #27ae60;
+        }
+
+        // 统一所有一级菜单项目样式
+        .el-menu-item,
+        .el-submenu__title {
+          border-radius: 8px;
+          margin: 4px 8px;
+          padding: 0 16px !important;
+          transition: all 0.3s ease;
+          color: #27ae60;
+          background: transparent;
+        }
+
+        // 悬浮效果 - 绿蓝渐变
+        .el-menu-item:hover,
+        .el-submenu__title:hover {
+          background: linear-gradient(90deg, #52c41a 0%, #1890ff 100%) !important;
+          color: #ffffff !important;
+        }
+
+        // 选中效果 - 绿蓝渐变
+        .el-menu-item.is-active {
+          background: linear-gradient(90deg, #52c41a 0%, #1890ff 100%) !important;
+          color: #ffffff !important;
+        }
+
+        .is-active>.el-submenu__title {
+          background: linear-gradient(90deg, #52c41a 0%, #1890ff 100%) !important;
+          color: #ffffff !important;
+        }
+
+        // 子菜单样式
+        .el-submenu .el-menu {
+          background: transparent;
+        }
+
+        // 子菜单中的菜单项目
+        .el-submenu .el-menu-item {
+          // 子菜单项目继承父菜单的基础样式，但需要调整padding-left以保持层级
+          padding-left: 32px !important;
+          // 确保子菜单项目的border-radius可见
+          margin: 4px 8px;
+
+          min-width: auto !important;
+
+
+
+
+        }
+
+        // 嵌套子菜单的标题
+        .nest-menu .el-submenu>.el-submenu__title {
+          padding-left: 32px !important;
+          margin: 4px 8px;
+        }
+      }
+
+      .sidebar-logo-container {
+        background: linear-gradient(90deg, #52c41a 0%, #389e0d 100%);
+
+        .sidebar-title {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}

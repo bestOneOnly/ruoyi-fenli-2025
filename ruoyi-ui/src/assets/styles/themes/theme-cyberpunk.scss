@@ -1,0 +1,75 @@
+// 赛博朋克风格主题
+#app {
+  .sidebar-container {
+    &.theme-cyberpunk {
+      background: #0f0e17;
+
+      .el-scrollbar {
+        .el-menu {
+          background: #0f0e17;
+          text-color: #a78bfa;
+        }
+
+        .el-menu-item,
+        .el-submenu__title {
+          border-radius: 4px;
+          margin: 3px 8px;
+          padding: 0 16px !important;
+          transition: all 0.3s ease;
+          color: #a78bfa;
+          background: transparent;
+          border: 1px solid transparent;
+        }
+
+        // 悬浮效果 - 霓虹粉紫渐变
+        .el-menu-item:hover,
+        .el-submenu__title:hover {
+          background: linear-gradient(90deg, #ff0080 0%, #7928ca 100%) !important;
+          color: #ffffff !important;
+          border-color: #ff0080;
+          box-shadow: 0 0 10px rgba(255, 0, 128, 0.5);
+        }
+
+        // 选中效果 - 霓虹蓝紫渐变
+        .el-menu-item.is-active {
+          background: linear-gradient(90deg, #00f5d4 0%, #7209b7 100%) !important;
+          color: #ffffff !important;
+          border-color: #00f5d4;
+          box-shadow: 0 0 15px rgba(0, 245, 212, 0.6);
+        }
+
+        .is-active > .el-submenu__title {
+          background: linear-gradient(90deg, #00f5d4 0%, #7209b7 100%) !important;
+          color: #ffffff !important;
+          border-color: #00f5d4;
+          box-shadow: 0 0 15px rgba(0, 245, 212, 0.6);
+        }
+
+        .nest-menu .el-submenu>.el-submenu__title,
+        .el-submenu .el-menu-item {
+          background-color: transparent !important;
+          // min-width: calc($base-sidebar-width - 16px) !important;
+          margin-left: 24px;
+
+          &:hover {
+            background: linear-gradient(90deg, #ff0080 0%, #7928ca 100%) !important;
+            color: #ffffff !important;
+            border-color: #ff0080;
+            box-shadow: 0 0 10px rgba(255, 0, 128, 0.5);
+          }
+        }
+      }
+
+      .sidebar-logo-container {
+        background: linear-gradient(90deg, #00f5d4 0%, #7209b7 100%);
+        border-bottom: 1px solid #00f5d4;
+        box-shadow: 0 2px 20px rgba(0, 245, 212, 0.3);
+
+        .sidebar-title {
+          color: #ffffff;
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+      }
+    }
+  }
+}

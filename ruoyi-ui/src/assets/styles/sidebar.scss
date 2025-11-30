@@ -8,7 +8,7 @@
   }
 
   .sidebarHide {
-    margin-left: 0!important;
+    margin-left: 0 !important;
   }
 
   .sidebar-container {
@@ -24,7 +24,7 @@
     left: 0;
     z-index: 1001;
     overflow: hidden;
-    -webkit-box-shadow: 2px 0 6px rgba(0,21,41,.35);
+    -webkit-box-shadow: 2px 0 6px rgba(0, 21, 41, .35);
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
 
     // reset element-ui css
@@ -70,7 +70,8 @@
       width: 100% !important;
     }
 
-    .el-menu-item, .el-submenu__title {
+    .el-menu-item,
+    .el-submenu__title {
       overflow: hidden !important;
       text-overflow: ellipsis !important;
       white-space: nowrap !important;
@@ -84,25 +85,13 @@
       }
     }
 
-    & .theme-dark .is-active > .el-submenu__title {
-      color: $base-menu-color-active !important;
-    }
-
     & .nest-menu .el-submenu>.el-submenu__title,
     & .el-submenu .el-menu-item {
-      min-width: $base-sidebar-width !important;
-
+      // 移除强制min-width，让子菜单自然适应父容器宽度
+      // 这样可以确保子菜单的border-radius: 8px全部可见
+      
       &:hover {
         background-color: rgba(0, 0, 0, 0.06) !important;
-      }
-    }
-
-    & .theme-dark .nest-menu .el-submenu>.el-submenu__title,
-    & .theme-dark .el-submenu .el-menu-item {
-      background-color: $base-sub-menu-background !important;
-
-      &:hover {
-        background-color: $base-sub-menu-hover !important;
       }
     }
   }
@@ -225,3 +214,9 @@
     }
   }
 }
+
+// 导入主题样式
+@import './themes/theme-dark.scss';
+@import './themes/theme-light.scss';
+@import './themes/theme-green.scss';
+@import './themes/theme-cyberpunk.scss';

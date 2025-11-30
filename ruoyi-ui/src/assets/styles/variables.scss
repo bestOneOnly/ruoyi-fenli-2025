@@ -21,6 +21,15 @@ $base-logo-light-title-color: #001529;
 $base-sub-menu-background:#1f2d3d;
 $base-sub-menu-hover:#001528;
 
+// 绿色菜单主题风格
+$base-menu-green-color:#e6f7ff;
+$base-menu-green-color-active:#ffffff;
+$base-menu-green-background:linear-gradient(90deg, #52c41a 0%, #389e0d 100%);
+$base-logo-green-title-color: #ffffff;
+
+$base-sub-menu-green-background:#389e0d;
+$base-sub-menu-green-hover:#237804;
+
 // 自定义暗色菜单风格
 /**
 $base-menu-color:hsla(0,0%,100%,.65);

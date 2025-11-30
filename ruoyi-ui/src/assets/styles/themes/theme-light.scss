@@ -1,0 +1,52 @@
+// 浅色主题样式
+#app {
+  .sidebar-container {
+    &.theme-light {
+      background-color: $base-menu-light-background;
+
+      .el-scrollbar {
+        .el-menu {
+          background-color: $base-menu-light-background;
+          text-color: $base-menu-light-color;
+        }
+
+        .is-active > .el-submenu__title {
+          color: $base-menu-color-active !important;
+        }
+
+        .nest-menu .el-submenu>.el-submenu__title,
+        .el-submenu .el-menu-item {
+          background-color: transparent !important;
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.06) !important;
+          }
+        }
+
+        .el-menu-item {
+          color: $base-menu-light-color;
+        }
+
+        .el-menu-item.is-active {
+          color: $base-menu-color-active;
+        }
+
+        .el-submenu__title {
+          color: $base-menu-light-color;
+        }
+
+        .el-submenu__title:hover {
+          background-color: rgba(0, 0, 0, 0.06) !important;
+        }
+      }
+
+      .sidebar-logo-container {
+        background-color: $base-menu-light-background;
+
+        .sidebar-title {
+          color: $base-logo-light-title-color;
+        }
+      }
+    }
+  }
+}

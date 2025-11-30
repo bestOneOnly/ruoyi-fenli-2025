@@ -1,0 +1,52 @@
+// 深色主题样式
+#app {
+  .sidebar-container {
+    &.theme-dark {
+      background-color: $base-menu-background;
+
+      .el-scrollbar {
+        .el-menu {
+          background-color: $base-menu-background;
+          text-color: $base-menu-color;
+        }
+
+        .is-active > .el-submenu__title {
+          color: $base-menu-color-active !important;
+        }
+
+        .nest-menu .el-submenu>.el-submenu__title,
+        .el-submenu .el-menu-item {
+          background-color: $base-sub-menu-background !important;
+
+          &:hover {
+            background-color: $base-sub-menu-hover !important;
+          }
+        }
+
+        .el-menu-item {
+          color: $base-menu-color;
+        }
+
+        .el-menu-item.is-active {
+          color: $base-menu-color-active;
+        }
+
+        .el-submenu__title {
+          color: $base-menu-color;
+        }
+
+        .el-submenu__title:hover {
+          background-color: rgba(0, 0, 0, 0.06) !important;
+        }
+      }
+
+      .sidebar-logo-container {
+        background-color: $base-menu-background;
+
+        .sidebar-title {
+          color: $base-logo-title-color;
+        }
+      }
+    }
+  }
+}
